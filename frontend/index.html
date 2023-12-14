@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"/>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" defer></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js" defer></script>
+    <script src="index.js" defer></script>
+    <title>Helipeli 2.0</title>
+</head>
+
+<body>
+<div class="container">
+    <header class="page-header">
+        <h1 class="page-title">
+            <ion-icon name="leaf-outline"></ion-icon>&nbsp;Helipeli&nbsp;2.0&nbsp;<ion-icon
+                name="leaf-outline"></ion-icon>
+        </h1>
+
+        <nav>
+            <ul class="flex-wrap space-evenly">
+                <li>
+                    <button id="startGame-Btn" class="button button-white">StartGame</button>
+                </li>
+                <li>
+                    <button id="highscore-Btn" class="button button-white">High Scores</button>
+
+                </li>
+                <li>
+                    <a class="button button-white" href="about.html">About</a>
+                </li>
+<!--
+                <li>
+                    <button id="diceBtn" class="button button-white">Play Dice</button>
+                </li>
+                <li>
+                    <audio id="musicPlayer" controls>
+                        <source src="vaporwave1.mp3" type="audio/mp3">
+
+                    </audio>
+                </li>
+  -->
+
+            </ul>
+        </nav>
+    </header>
+
+    <main class="flex-wrap">
+        <div id="map">
+            <!-- <img class="responsive-img" src="img/england.svg" alt="map of finland"> -->
+        </div>
+        <div class="boxes">
+
+            <section class="box">
+                <header>
+                    <h2 id="airport-name">Map info</h2>
+                </header>
+                <table id="current location">
+                    <tr>
+                        <td>Map marker color indicators</td>
+                        <td>Heliports in range</td>
+                    </tr>
+
+                    <tr>
+
+                        <td id="current-location">
+                            <img id="" src="" alt="">
+                        </td>
+
+                        <td id="in-range"></td>
+                    </tr>
+                    <tr id="info"></tr>
+                    <tr id="info3"></tr>
+
+
+                </table>
+            </section>
+
+            <section class="box">
+                <header>
+                    <h2>Events</h2>
+                </header>
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            <h3 id="player-name">Player Name: </h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="event"></span></td>
+                    </tr>
+                </table>
+            </section>
+
+            <section class="box">
+                <header>
+                    <h2>Goals</h2>
+                </header>
+                <ul id="goals" class="flex-wrap">
+                    <li>
+                        <figure>
+                            <img src="" alt="">
+                            <figcaption id="turns">Turns played: 0</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="" alt="">
+                            <figcaption id="cones-left">Cones left: 0</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="" alt="">
+                            <figcaption id="score">Score: 0</figcaption>
+
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="" alt="">
+                            <figcaption id="cones-consumed">Cones consumed: 0</figcaption>
+
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer class="page-footer">
+        <p>All for one and one for all the cones!</p>
+    </footer>
+    <div class="goal hide">
+        <h2>You found the Mega Cone! Good job!</h2>
+        <p>
+            <span id="goal-txt">Goals reached!!</span>
+        </p>
+    </div>
+</div>
+
+</body>
+
+
+<!--tähän lisäillään asioita joita näytetään modalissa -->
+<dialog class="modal">
+    <span class="close">&times;</span>
+    <!--<span>&#x2715;</span>-->
+    <div id="dialog-div" class="modal-content">
+
+    </div>
+</dialog>
+
+</html>

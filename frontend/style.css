@@ -1,0 +1,237 @@
+/* variables */
+:root {
+  --black: rgb(23, 23, 23);
+  --white: rgb(248, 246, 246);
+  --grey: rgb(128, 128, 128);
+  --dark-grey: rgb(57, 57, 57);
+}
+
+/* utilities */
+.button {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+  transition: all 300ms;
+}
+
+.button-white {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+}
+
+.hide {
+  display: none;
+}
+
+.float {
+  float: left;
+}
+
+/* app specific */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--white);
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+}
+
+.page-header,
+.page-footer {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 1rem;
+}
+
+.page-footer {
+  text-align: center;
+}
+
+.page-title {
+  margin: 0;
+  text-align: center;
+}
+
+ion-icon {
+  vertical-align: middle;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+main {
+  padding: 1rem 2rem;
+}
+
+#map {
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
+}
+
+.boxes {
+  width: 100%;
+}
+
+.box {
+  padding: 1rem;
+  font-size: x-small;
+}
+
+#map,
+.box {
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 10px;
+  margin-bottom: 1rem;
+}
+
+.box h2,
+.box figure {
+  margin: 0;
+  padding: 0;
+}
+
+.box table {
+  width: 100%;
+  text-align: center;
+  border: var(--grey) solid 1px;
+  border-radius: 4px;
+}
+
+.box li {
+  width: calc(50% - 0.6rem);
+  text-align: center;
+  border: var(--grey) solid 1px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 0.3rem;
+  margin: 0.3rem;
+}
+
+.box img {
+  height: 3rem;
+}
+
+
+@media screen and (min-width: 769px) {
+  .box {
+    font-size: initial;
+  }
+
+  #map {
+    width: 40%;
+    height: initial;
+  }
+
+  .boxes {
+    width: 60%;
+    padding-left: 1rem;
+    box-sizing: border-box;
+  }
+}
+
+/* Leaflet icons */
+.blue-icon {
+  background-color: #2474ff;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+}
+
+.green-icon {
+  background-color: #27ba35;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+/* tallennetut pelit modal*/
+
+.vertical-menu {
+    width: 200px; /* Set a width if you like */
+    height: 300px;
+    overflow-y: auto;
+}
+
+
+.vertical-menu p {
+    background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.vertical-menu p:hover {
+    background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.vertical-menu p.active {
+    background-color: #04AA6D; /* Add a green color to the "active/current" link */
+    color: white;
+}
+
+
+
+/* modalien muotoilua*/
+.modal {
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #fff;
+  max-width: 400px;
+  margin:auto;
+  text-align: center;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+
+
+.highscore-item {
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.highscore-item span.name {
+  width: 100px;
+  display: inline-block;
+  text-align: left;
+}
+
+.highscore-item span.score {
+  display: inline-block;
+  text-align: left;
+}

@@ -1,0 +1,3 @@
+#vaihda nämä
+user = ''
+pwd = ''
